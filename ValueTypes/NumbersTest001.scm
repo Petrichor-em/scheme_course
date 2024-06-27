@@ -1,0 +1,5 @@
+(display (real? 1+2i))
+(newline)
+(display (real? 3.1415))
+(newline)
+(display (complex? 1+2i))

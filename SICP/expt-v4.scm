@@ -1,0 +1,12 @@
+(define (expt b n)
+	(define (expt-iter product counter)
+		(if (= 0 counter)
+			product
+			(if (is-even? counter)
+				(expt-iter (* product b b) (- counter 2))
+				(expt-iter (* product b) (- counter 1)))))
+	(define (is-even? x)
+		(= (remainder x 2) 0))
+	(expt-iter 1 n))
+(display (expt 5 4))
+(newline)

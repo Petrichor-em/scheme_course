@@ -1,0 +1,8 @@
+(define boolA #t)
+(define boolB #f)
+(if (and boolA boolB)
+	(display #t)
+	(display #f))
+(if (or boolA boolB)
+	(display #t)
+	(display #f))

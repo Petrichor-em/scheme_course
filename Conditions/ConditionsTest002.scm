@@ -1,0 +1,16 @@
+(define strA "Hello World")
+(define strB "Hello World")
+(if (string=? strA strB)
+	(begin
+		(display strA)
+		(display " = ")		
+		(display strB)
+		(newline)
+	)
+	(begin
+		(display strA)	
+		(display " != ")
+		(display strB)
+		(newline)
+	)
+)

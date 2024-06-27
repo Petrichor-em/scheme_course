@@ -1,0 +1,6 @@
+(display #\newline)
+(display #\tab)
+(display #\c)
+(display #\space)
+(display #\b)
+(display "Hello\tWorld!")
