@@ -9,7 +9,7 @@
 		  ((= (entry set) x) #t)
 		  ((> (entry set) x) (element-of-set? x (left-branch set)))
 		  ((< (entry set) x) (element-of-set? x (right-branch set)))))
-		
+
 (define (adjoin-set x set)
 	(cond ((null? set) (make-tree x `() `()))
 		  ((= (entry set) x) set)
@@ -26,5 +26,16 @@
 	(iter `() list))
 
 (define tree (list-to-tree (list 3 5 4 6 0 2 7 8 3 2 23 45 23 10 39)))
-(display (element-of-set? 9 tree))
+
+(define (print-tree tree)
+  (if (null? tree)
+      'search-end
+      (begin
+        (display (entry tree))
+        (newline)
+        (print-tree (left-branch tree))
+        (print-tree (right-branch tree)))))
+
+(display (length (list 3 5 4 6 0 2 7 8 3 2 23 45 23 10 39)))
 (newline)
+(print-tree tree)
